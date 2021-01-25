@@ -85,15 +85,23 @@
 //
 // Heaters / Fans
 //
-#define HEATER_0_PIN                        PA8
-#define FAN_PIN                             PC8
-#define HEATER_BED_PIN                      PC9
+#define HEATER_0_PIN                        -1
+#define FAN_PIN                             -1
+#define HEATER_BED_PIN                      -1
 
 //
 // Temperature Sensors
 //
 #define TEMP_BED_PIN                        PB1   // Analog Input
 #define TEMP_0_PIN                          PA0   // Analog Input
+
+//
+// CNC Spindle control
+//
+#define SPINDLE_LASER_ENA_PIN               PA8   // "HE" - relay for spindle
+#define SPINDLE_LASER_PWM_PIN               -1
+#define COOLANT_MIST_PIN                    PC9   // "HB" - relay for vacuum
+#define COOLANT_FLOOD_PIN                   PC8   // "FAN0" - relay for something else
 
 //
 // LCD Pins
