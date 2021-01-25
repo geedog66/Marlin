@@ -85,9 +85,9 @@
 //
 // Heaters / Fans
 //
-#define HEATER_0_PIN                        -1
-#define FAN_PIN                             -1
-#define HEATER_BED_PIN                      -1
+#define HEATER_0_PIN                        PC3
+#define FAN_PIN                             PC3
+#define HEATER_BED_PIN                      PC3
 
 //
 // Temperature Sensors
