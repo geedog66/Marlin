@@ -3002,7 +3002,7 @@
   #define SPINDLE_LASER_PWM             false   // Set to "true" if your controller supports setting the speed/power
   #define SPINDLE_LASER_PWM_INVERT      false  // Set to "true" if the speed/power goes up when you want it to go slower
 
-  #define SPINDLE_LASER_FREQUENCY       2500   // (Hz) Spindle/laser frequency (only on supported HALs: AVR and LPC)
+  //#define SPINDLE_LASER_FREQUENCY       2500   // (Hz) Spindle/laser frequency (only on supported HALs: AVR and LPC)
 
   //#define SPINDLE_SERVO         // A servo converting an angle to spindle power
   #ifdef SPINDLE_SERVO
@@ -3150,8 +3150,8 @@
 #if ENABLED(COOLANT_CONTROL)
   #define COOLANT_MIST                // Enable if mist coolant is present
   #define COOLANT_FLOOD               // Enable if flood coolant is present
-  #define COOLANT_MIST_INVERT  false  // Set "true" if the on/off function is reversed
-  #define COOLANT_FLOOD_INVERT false  // Set "true" if the on/off function is reversed
+  #define COOLANT_MIST_INVERT  true  // Set "true" if the on/off function is reversed
+  #define COOLANT_FLOOD_INVERT true  // Set "true" if the on/off function is reversed
 #endif
 
 /**
@@ -3339,8 +3339,8 @@
 #define CUSTOM_USER_MENUS
 #if ENABLED(CUSTOM_USER_MENUS)
   #define CUSTOM_USER_MENU_TITLE "CNC Commands"
-  #define USER_SCRIPT_DONE "M117 Done"
-  #define USER_SCRIPT_AUDIBLE_FEEDBACK
+  //#define USER_SCRIPT_DONE "M117 Done"
+  //#define USER_SCRIPT_AUDIBLE_FEEDBACK
   //#define USER_SCRIPT_RETURN  // Return to status screen after a script
 
   #define USER_DESC_1 "Zero all axes"
@@ -3353,10 +3353,13 @@
   #define USER_GCODE_3 "G92 Z"
 
   #define USER_DESC_4 "Vacuum On"
-  #define USER_GCODE_4 "M8"
+  #define USER_GCODE_4 "M7" // mist on
 
-  #define USER_DESC_5 "Vacuum Off"
-  #define USER_GCODE_5 "M9"
+  #define USER_DESC_5 "Vacuum/Flood Off"
+  #define USER_GCODE_5 "M9" // flood on
+
+  #define USER_DESC_6 "Flood On"
+  #define USER_GCODE_6 "M8" // flood on
 #endif
 
 /**

@@ -44,11 +44,11 @@
 // Limit Switches
 //
 #define X_MIN_PIN                           PC2
-#define X_MAX_PIN                           PA2
+//#define X_MAX_PIN                           PA2
 #define Y_MIN_PIN                           PC1
-#define Y_MAX_PIN                           PA1
+//#define Y_MAX_PIN                           PA1
 #define Z_MIN_PIN                           PC0
-#define Z_MAX_PIN                           PC3
+//#define Z_MAX_PIN                           PC3
 
 //
 // Steppers
@@ -85,23 +85,22 @@
 //
 // Heaters / Fans
 //
-#define HEATER_0_PIN                        PC3
-#define FAN_PIN                             PC3
-#define HEATER_BED_PIN                      PC3
+//#define HEATER_0_PIN                        PA8
+#define FAN_PIN                             PC8
+//#define HEATER_BED_PIN                      PC9
 
 //
 // Temperature Sensors
 //
-#define TEMP_BED_PIN                        PB1   // Analog Input
+//#define TEMP_BED_PIN                        PB1   // Analog Input
 #define TEMP_0_PIN                          PA0   // Analog Input
 
 //
 // CNC Spindle control
 //
-#define SPINDLE_LASER_ENA_PIN               PA8   // "HE" - relay for spindle
-#define SPINDLE_LASER_PWM_PIN               -1
-#define COOLANT_MIST_PIN                    PC9   // "HB" - relay for vacuum
-#define COOLANT_FLOOD_PIN                   PC8   // "FAN0" - relay for something else
+#define SPINDLE_LASER_ENA_PIN               PA2   // "XMAX" - relay for spindle
+#define COOLANT_MIST_PIN                    PA1   // "YMAX" - relay for vacuum
+#define COOLANT_FLOOD_PIN                   PC3   // "ZMAX" - relay for something else
 
 //
 // LCD Pins
