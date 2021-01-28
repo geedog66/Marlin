@@ -661,7 +661,7 @@
 
 //#define SENSORLESS_BACKOFF_MM  { 2, 2 }     // (mm) Backoff from endstops before sensorless homing
 
-#define HOMING_BUMP_MM      { 5, 5, 2 }       // (mm) Backoff from endstops after first bump
+#define HOMING_BUMP_MM      { 0, 0, 0 }       // (mm) Backoff from endstops after first bump
 #define HOMING_BUMP_DIVISOR { 2, 2, 4 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 
 //#define HOMING_BACKOFF_POST_MM { 2, 2, 2 }  // (mm) Backoff from endstops after homing
@@ -1301,7 +1301,7 @@
   //#define LONG_FILENAME_HOST_SUPPORT
 
   // Enable this option to scroll long filenames in the SD card menu
-  //#define SCROLL_LONG_FILENAMES
+  #define SCROLL_LONG_FILENAMES
 
   // Leave the heaters on after Stop Print (not recommended!)
   //#define SD_ABORT_NO_COOLDOWN
@@ -1393,7 +1393,7 @@
    *
    * :[ 'LCD', 'ONBOARD', 'CUSTOM_CABLE' ]
    */
-  //#define SDCARD_CONNECTION LCD
+  #define SDCARD_CONNECTION LCD
 
   // Enable if SD detect is rendered useless (e.g., by using an SD extender)
   //#define NO_SD_DETECT
@@ -3341,25 +3341,29 @@
   #define CUSTOM_USER_MENU_TITLE "CNC Commands"
   //#define USER_SCRIPT_DONE "M117 Done"
   //#define USER_SCRIPT_AUDIBLE_FEEDBACK
-  //#define USER_SCRIPT_RETURN  // Return to status screen after a script
+  #define USER_SCRIPT_RETURN  // Return to status screen after a script
 
   #define USER_DESC_1 "Zero all axes"
-  #define USER_GCODE_1 "G92 XYZ"
+  #define USER_GCODE_1 "G92 X0 Y0 Z0"
 
   #define USER_DESC_2 "Zero X & Y axes"
-  #define USER_GCODE_2 "G92 XY"
+  #define USER_GCODE_2 "G92 X0 Y0"
 
   #define USER_DESC_3 "Zero Z axis"
-  #define USER_GCODE_3 "G92 Z"
+  #define USER_GCODE_3 "G92 Z0"
 
-  #define USER_DESC_4 "Vacuum On"
-  #define USER_GCODE_4 "M7" // mist on
+  #define USER_DESC_4 "Go to zero"
+  #define USER_GCODE_4 "G1 X0 Y0 Z0 F500" // mist on - YMAX
 
-  #define USER_DESC_5 "Vacuum/Flood Off"
-  #define USER_GCODE_5 "M9" // flood on
+  #define USER_DESC_5 "Mist On"
+  #define USER_GCODE_5 "M7" // mist on - YMAX
 
   #define USER_DESC_6 "Flood On"
-  #define USER_GCODE_6 "M8" // flood on
+  #define USER_GCODE_6 "M8" // flood on - ZMIN
+
+  #define USER_DESC_7 "Mist/Flood Off"
+  #define USER_GCODE_7 "M9" // flood on
+
 #endif
 
 /**

@@ -48,7 +48,7 @@
 #define Y_MIN_PIN                           PC1
 //#define Y_MAX_PIN                           PA1
 #define Z_MIN_PIN                           PC0
-//#define Z_MAX_PIN                           PC3
+#define Z_MAX_PIN                           PC3
 
 //
 // Steppers
@@ -99,8 +99,8 @@
 // CNC Spindle control
 //
 #define SPINDLE_LASER_ENA_PIN               PA2   // "XMAX" - relay for spindle
-#define COOLANT_MIST_PIN                    PA1   // "YMAX" - relay for vacuum
-#define COOLANT_FLOOD_PIN                   PC3   // "ZMAX" - relay for something else
+#define COOLANT_MIST_PIN                    PA1   // "YMAX" - relay for mist M7
+#define COOLANT_FLOOD_PIN                   PC0   // "ZMIN" - relay for flood M8
 
 //
 // LCD Pins
